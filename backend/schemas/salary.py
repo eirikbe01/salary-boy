@@ -1,4 +1,4 @@
-from typing import Optional, Literal
+from typing import Optional
 from enum import Enum
 from datetime import datetime
 from pydantic import BaseModel, Field, ConfigDict
@@ -36,7 +36,7 @@ class SalaryUpdate(SalaryBase):
     pass
 
 class SalaryResponse(SalaryBase):
-    id: int # database-generated
+    id: int
     reported_salary: int
     includes_bonus: bool
     includes_provision: bool
